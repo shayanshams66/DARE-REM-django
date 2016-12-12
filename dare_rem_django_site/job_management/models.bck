@@ -1,0 +1,17 @@
+from django.db import models
+from django.utils.encoding import smart_unicode
+
+
+# Create your models here.
+
+   
+class Job(models.Model):
+
+	
+    id = models.IntegerField(primary_key=True)
+    #select = models.BooleanField(default=False)
+    Job_Description = models.CharField(verbose_name="Put your job description here", max_length=200) 
+    Submitted_time = models.DateTimeField(auto_now_add=True, auto_now=False)
+    Job_Status = models.DateTimeField(auto_now_add=False, auto_now=True)
+    #def __unicode__(self):
+       #return smart_unicode(self.Job_id,self.name,self.Submitted_time,self.Job_Status)
